@@ -1,0 +1,207 @@
+.Nav{
+    width: 100vw;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 0px;
+}
+
+.caixa-search {
+    width: 475px;
+    background-color: #F6F6F6;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 5px 5px 20px;
+    display: flex;
+    align-items: center;
+
+}
+.container_nav{
+    margin-left: 10px;
+    display: flex;
+    width: 200px;
+    height: 43px;
+}
+.caixa-texto{
+    width: 85%;
+    background-color: #F6F6F6;
+    height: 100%;
+    border:none;
+    outline: none;
+    margin: 0px 5px 0px 5px;
+}
+
+.botao-search{
+    width: 50px;
+    height: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.intro_opcoes{
+    display: flex;
+    flex-direction: column;
+
+}
+#lupa{
+    
+    width: 23px;
+    height: 23px;
+
+}
+.link_logo{
+    text-decoration: none;
+}
+.painel{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#mensagem{
+    width: 30px;
+    height: 30px;
+}
+.opcoes{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    
+}
+
+
+
+.span_opcoes{
+    width: 90px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+#logo{
+    color: black;
+}
+#entrar_cadastrar{
+    width: 135px;
+    
+
+}
+#entrar_cadastrar a{
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    
+}
+#carrinho{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.opcoes-ocultas{
+    visibility: hidden;
+    border: solid 1px ;
+    background-color: #ffffff;
+    border-color: rgb(189, 189, 189);
+    border-radius: 7px;
+    width: 175%;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    transform: translateY(90%);
+    flex-direction: column;
+    transition: transform 0.3s ease-out;
+    position: absolute;
+   
+}
+.opcoes:hover > .opcoes-ocultas{
+   display: flex;
+   visibility: visible;
+   z-index: 2;
+   transform: translateY(96%);
+   
+}
+
+
+.opcoes_div_ocultas a{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    margin-left: 7px;
+    gap: 5px;
+}
+
+.opcoes_div_ocultas{
+    display: flex;
+    height: 30px;
+    margin-top: 7px;
+    justify-content: space-around;
+    width: 100%;
+}
+.span_opcoes_ocultas{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 5px;
+    height: 30px;
+}
+
+#logo_email{
+width: 25px;
+height: 25px;
+}
+#login_logout{
+    width: 130%;
+
+}
+.aps_pessoa{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+    gap: 5px;
+
+}
+#img_cliente{
+    width: 40px;
+    height: 40px;
+   
+}
+#saudacao_cliente{
+    font-size: 16px;
+}
+#saudacao_cliente{
+    width: auto;
+}
+#ou{
+    cursor:default;
+}
+.gambs{
+
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 15px;
+}
+@media  (max-width: 1025px){
+
+}
