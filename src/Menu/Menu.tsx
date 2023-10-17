@@ -19,7 +19,7 @@ interface Category {
 export function Menu() {
   const [res, setRes] = useState<Category[]>([]);
 
-  const totalCategorias: number = res.slice(0, 5).length;
+  const totalCategorias: number = res.slice(0, 6).length;
 
   const getRes = async () => {
     try {
@@ -58,23 +58,21 @@ export function Menu() {
 
                 <div className="subcategorias">
                   <ul className="ul_mari">
-                  <div className="div-sub-titulo" id="" key={resposta.id}>
-                        {" "}
-                        <h4> {resposta.name} </h4>{" "}
-                      </div>
+                    <div className="div-sub-titulo" id="" key={resposta.id}>
+                      {" "}
+                      <h4> {resposta.name} </h4>{" "}
+                    </div>
                     <li className="li_mari">
-                      
-                        {resposta.subcategories
-                          .slice(0, 20)
-                          .map((subcategoria) => (
-                            <li
-                              className="li-sub-cat"
-                              key={subcategoria.subcategoryId}
-                            >
-                              {subcategoria.subcategoryName}{" "}
-                            </li>
-                          ))}
-                      
+                      {resposta.subcategories
+                        .slice(0, 20)
+                        .map((subcategoria) => (
+                          <li
+                            className="li-sub-cat"
+                            key={subcategoria.subcategoryId}
+                          >
+                            {subcategoria.subcategoryName}{" "}
+                          </li>
+                        ))}
                     </li>
                   </ul>
                 </div>
@@ -88,21 +86,13 @@ export function Menu() {
             <ul className="filtro_oculto" id="sub-cat-overflow">
               {resposta.subcategories
                 .slice(0, 10)
-                .map((subcategoria, index) => (
+                .map((subcategoria) => (
                   <div
-                    className={`container_mari ${
-                      index === resposta.subcategories.length - 1
-                        ? "last-sub-cat-div"
-                        : ""
-                    }`}
+                    className="container_mari"
                     key={subcategoria.subcategoryId}
                   >
                     <li
-                      className={`item_filtro ${
-                        index === resposta.subcategories.length - 1
-                          ? "last-sub-cat-li"
-                          : ""
-                      }`}
+                      className="item_filtro"
                       key={subcategoria.subcategoryId}
                     >
                       {subcategoria.subcategoryName}{" "}

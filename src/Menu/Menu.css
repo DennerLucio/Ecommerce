@@ -107,6 +107,9 @@ ul {
   background-color: #f5f4f4;
 
 }
+.item_filtro:last-child{
+  height: 40px;
+}
 .subcategorias {
   display: flex;
   visibility: hidden;
@@ -147,7 +150,12 @@ ul {
   position: unset;
   background-color: white;
 }
+.container_mari:last-child{
+  flex-grow: 1;
+  cursor: default;
 
+
+}
 .ul_mari {
   display: flex;
   width: 100%;
