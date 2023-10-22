@@ -25,13 +25,15 @@
     display: flex;
     color: #000; /* Substitua #000 pela cor desejada */
     font-size: 2.5rem;
+    justify-content: center;
+    align-items:center ;
     
 }
 .slick-arrow{
     cursor: pointer;
     position: absolute;
+   
     z-index: 1;
-    margin-top: -30px;
     background-color: none;
     
 }
