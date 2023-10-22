@@ -1,10 +1,14 @@
 import './Home.css';
-import { Link } from 'react-router-dom';
+import { Carousels } from "../Carousel/Carousels";
 
 export function Home() {
   return (
     <div className="Home">
-      testetest
+      
+      <Carousels />
+
+   
+    
     </div>
   );
 }
