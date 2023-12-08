@@ -2,7 +2,7 @@ import Slider, { Settings } from "react-slick";
 import banner1 from "../img/banner1.png";
 import banner2 from "../img/banner2.png";
 import banner3 from "../img/banner3.png";
-import banner4 from "../img/banner4.png";
+// import banner4 from "../img/banner4.png";
 
 
 import "slick-carousel/slick/slick.css";
@@ -67,9 +67,9 @@ export function Carousels() {
         <div className="card">
           <img src={banner3} alt="Imagem 3"  className="img-card-carousel"/>
         </div>
-        <div className="card">
+        {/* <div className="card">
           <img src={banner4} alt="Imagem 4" className="img-card-carousel" />
-        </div>
+        </div> */}
      
       </Slider>
     

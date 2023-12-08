@@ -3,5 +3,18 @@
     width: 100vw;
     height: auto;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.card_container{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: rgb(252, 252, 252);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
 }

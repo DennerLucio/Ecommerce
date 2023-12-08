@@ -3,8 +3,10 @@
     flex-direction: column;
     min-width: 180px;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
+    height: 300px;
+
 }
 .card{
     display: flex;
