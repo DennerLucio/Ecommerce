@@ -1,0 +1,40 @@
+.Contador {
+  display: flex;
+  flex-direction: row;
+  width: 85px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.buttons-contador {
+  width: 20px;
+  height: 20px;
+  border: white;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+.buttons-contador span img {
+  width: 10px;
+  height: 10px;
+}
+
+.buttons-contador:hover {
+  background-color: rgb(243, 243, 243);
+}
+.div-borda-contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(228, 227, 227);
+  border-radius: 3px;
+  gap: 5px;
+  width: 100px;
+  height: 45px;
+}
