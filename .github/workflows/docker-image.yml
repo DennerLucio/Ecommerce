@@ -24,5 +24,5 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t dennerlucio/ecommerce_front:${DOCKER_TAG} -f /.Dockerfile .
+        docker build -t dennerlucio/ecommerce_front:${DOCKER_TAG} -f Dockerfile .
         docker push dennerlucio/ecommerce_front:${DOCKER_TAG}
