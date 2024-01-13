@@ -1,10 +1,11 @@
 .Home{
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .card_container{

@@ -1,6 +1,6 @@
 import './Nav.css';
 import { Link } from 'react-router-dom';
-import Lupa from '../img/lupa.png'
+
 import Mensagem from '../img/dialogo.png';
 import Perfil from '../img/perfil.png';
 import Email from '../img/email.png';
@@ -8,6 +8,7 @@ import Carrinho from '../img/carrinho.png';
 import Logo from '../img/logo.png'
 import Pessoa from '../img/pessoa.png'
 import { Menu } from "../Menu/Menu";
+import { BarraPesquisa } from '../Utilitarios/BarraPesquisa';
 
 export function Nav() {
 
@@ -20,11 +21,7 @@ export function Nav() {
         </Link>
       </div>
       <div className="caixa-search">
-            <input className="caixa-texto" type="text" name="" placeholder="Pesquisar..." />
-                
-            <a className="botao-search" href="#">
-                <img src={Lupa} alt="" id='lupa' />
-            </a>
+           <BarraPesquisa />
       </div>
       <div className="painel">
             <div className='opcoes'> <img id='mensagem' src={Mensagem} alt="" /> <span className='span_opcoes'>Central de Atendimento</span>

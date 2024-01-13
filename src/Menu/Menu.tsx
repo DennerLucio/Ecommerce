@@ -23,7 +23,7 @@ export function Menu() {
 
   const getRes = async () => {
     try {
-      const response = await axios.get("https://localhost:5001/Category");
+      const response = await axios.get('http://localhost:8000/Category');
       const data = response.data;
       setRes(data);
     } catch (error) {

@@ -1,5 +1,6 @@
-
 import './App.css'
+import { Footer } from './Footer/Footer.tsx';
+
 import { Home } from "./Home/Home.tsx";
 import { Nav } from "./Nav/Nav.tsx";
 
@@ -17,6 +18,9 @@ function App() {
           <Route path='/' element={<Home />} />
 
         </Routes>
+
+        <Footer />
+  
       </div>
   
   )

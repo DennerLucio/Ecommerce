@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import {  Contador } from "../Utilitarios/Contador";
 import {  BotaoCompra } from "../Utilitarios/BotaoCompra";
+import { Loading } from '../Utilitarios/Loading'
 
 interface Imagens {
  id: string;
@@ -18,36 +19,55 @@ interface Product {
 
 export function Card() {
 
+  const [loading, setLoading] = useState(true)
   const [res, setRes] = useState<Product[]>([]);
-
-  // const totalProduct: number = res.slice(0, 6).length;
 
   const getRes = async () => {
     try {
-      const response = await axios.get("https://localhost:5001/Product");
+      const response = await axios.get('http://localhost:8000/Product');
       const data = response.data;
       setRes(data);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
   };
   useEffect(() => {
-    getRes();
-  }, []);
+
+
+if (loading) {
+  const intervalId = setInterval(() => {
+    if (!loading) {
+      clearInterval(intervalId);
+    } else {
+      window.location.reload();
+    }
+  }, 10000);
+
+  getRes();
+
+  return () => {
+    clearInterval(intervalId);
+  };
+    
+  }}, [loading]);
 
   return (
-    <div className="Card">
-      {res.map((resposta) => (
-        <div className="container-card" key={resposta.id}>
-            <div className="div-img">{resposta.images.slice(0,1).map((imagem) => (
-              <img className="img-card" key={imagem.id} src={imagem.url} alt={`Imagem ${imagem.id}`} />
-            ))}</div>
-            <div className="div-interna-card"> <span>{resposta.name} </span> <span>{resposta.value}</span>  </div>
-           
-            <div className="div-interna-card last-div-interna-card"> <Contador/> <BotaoCompra texto='Comprar'/> </div>
+    (loading ? <Loading/> : <div className="Card">
+    {res.map((resposta) => (
+      <div className="container-card" key={resposta.id}>
+          <div className="div-img">{resposta.images.slice(0,1).map((imagem) => (
+            <img className="img-card" key={imagem.id} src={imagem.url} alt={`Imagem ${imagem.id}`} />
+          ))}</div>
+          <div className="div-interna-card"> <span>{resposta.name} </span> <span>{resposta.value}</span>  </div>
          
-        </div>
-      ))}
-    </div>
+          <div className="div-interna-card last-div-interna-card"> <Contador/> <BotaoCompra texto='Comprar'/> </div>
+       
+      </div>
+    ))}
+  </div> )
+
+
+    
   );
 }

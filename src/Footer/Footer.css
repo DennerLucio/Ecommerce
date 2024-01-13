@@ -1,0 +1,30 @@
+.Footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+
+}
+.footer-container{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+.section-footer{
+    display: flex;
+    justify-content: space-around;
+}
+.sobre-footer{
+ width: 400px;
+
+}
+.div-section-inter{
+
+
+}
