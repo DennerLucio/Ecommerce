@@ -1,4 +1,5 @@
 import './App.css'
+import { AppContext, AppProvider } from './Context/AppContext.tsx';
 import { Footer } from './Footer/Footer.tsx';
 
 import { Home } from "./Home/Home.tsx";
@@ -11,6 +12,7 @@ function App() {
   return (
    
       <div className='index'>
+        <AppProvider>
         <Nav/>
         
         <Routes>
@@ -20,7 +22,7 @@ function App() {
         </Routes>
 
         <Footer />
-  
+        </AppProvider>
       </div>
   
   )
