@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-type Texto = string; // Definição do tipo Texto
+type Texto = string; 
 
 interface Imagens {
     id: string;
@@ -10,7 +10,7 @@ interface Imagens {
 interface Product {
     id: string;
     name: string;
-    value: number; // Alterado para number, assumindo que é um valor monetário
+    value: number; 
     images: Imagens[];
 }
 
@@ -26,7 +26,6 @@ const AppContext = createContext<AppContextProps>({} as AppContextProps);
 
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
     const [txtBusca, setTxtBusca] = useState<Texto>("");
-    console.log(txtBusca)
     const [product, setProduct] = useState<Product[]>([]);
 
 
